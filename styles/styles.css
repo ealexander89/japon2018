@@ -145,11 +145,11 @@ strong {
       width: 64px;
       height: 28px;
       padding-left: 8px;
+      padding-right: 8px;
       font-size: 12px;
       line-height: 1.2em;
-      color: #9B9B9B; }
-      .plan-list .plan .plan-info .plan-time span {
-        font-size: 11px; }
+      color: #9B9B9B;
+      text-align: center; }
     .plan-list .plan .plan-info .type-icon {
       display: -webkit-box;
       display: -ms-flexbox;

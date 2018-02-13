@@ -180,13 +180,11 @@ strong {
                 width: 64px;
                 height: 28px;
                 padding-left: 8px;
+                padding-right: 8px;
                 font-size: 12px;
                 line-height: 1.2em;
                 color: $color-gray;
-
-                span {
-                    font-size: 11px;
-                }
+                text-align: center;
             }
 
             .type-icon {
