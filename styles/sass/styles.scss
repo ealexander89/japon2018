@@ -17,6 +17,14 @@ body {
     color: $color-black;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+i {
+    vertical-align: middle;
+}
+
 
 // Resets
 a {
@@ -135,13 +143,13 @@ strong {
     .plan {
         position: relative;
         display: block;
-        padding: 24px 24px 24px 52px;
+        padding: 24px 16px 24px 80px;
         border-bottom: 1px solid $color-border;
 
         figure {
             overflow: hidden;
             margin: 0;
-            margin-bottom: 8px;
+            margin: 8px 0;
             border-radius: 4px;
 
             img {
@@ -150,8 +158,36 @@ strong {
             }
         }
 
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            top: 0;
+            bottom: 0;
+            left: 64px;
+            background: $color-border;
+        }
+
         .plan-info {
             position: relative;
+
+            .plan-time {
+                position: absolute;
+                top: 2px;
+                left: -80px;
+                display: flex;
+                flex-direction: column;
+                width: 64px;
+                height: 28px;
+                padding-left: 8px;
+                font-size: 12px;
+                line-height: 1.2em;
+                color: $color-gray;
+
+                span {
+                    font-size: 11px;
+                }
+            }
 
             .type-icon {
                 display: flex;
@@ -194,16 +230,6 @@ strong {
             }
         }
 
-        &::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            top: 0;
-            bottom: 0;
-            left: 24px;
-            background: $color-border;
-        }
-
         &.plan-place {
             .plan-info {
                 .type-icon {
@@ -215,10 +241,14 @@ strong {
 
         &.plan-transition,
         &.plan-house {
-            padding: 16px 16px 16px 52px;
+            padding: 16px 16px 16px 80px;
             background: $color-gray-light;
 
             .plan-info {
+                .plan-time { 
+                    top: 0;
+                    justify-content: center;
+                }
                 font-size: 14px;
                 color: $color-gray-dark;
                 line-height: 24px;
@@ -233,11 +263,15 @@ strong {
             }
             .plan-info {
                 color: $color-home-text;
+                
+                .plan-time {
+                    color: $color-home-text;                        
+                }
 
                 .type-icon {
                     background-color: $color-home-line;
                 }
-
+                
                 .place-icon {
                     color: $color-home-line;
                 }

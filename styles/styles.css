@@ -4,6 +4,13 @@ body {
   margin: 0;
   color: #333; }
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+i {
+  vertical-align: middle; }
+
 a {
   color: #333;
   text-decoration: none; }
@@ -104,18 +111,45 @@ strong {
 .plan-list .plan {
   position: relative;
   display: block;
-  padding: 24px 24px 24px 52px;
+  padding: 24px 16px 24px 80px;
   border-bottom: 1px solid #D8D8D8; }
   .plan-list .plan figure {
     overflow: hidden;
     margin: 0;
-    margin-bottom: 8px;
+    margin: 8px 0;
     border-radius: 4px; }
     .plan-list .plan figure img {
       display: block;
       max-width: 100%; }
+  .plan-list .plan::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 64px;
+    background: #D8D8D8; }
   .plan-list .plan .plan-info {
     position: relative; }
+    .plan-list .plan .plan-info .plan-time {
+      position: absolute;
+      top: 2px;
+      left: -80px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 64px;
+      height: 28px;
+      padding-left: 8px;
+      font-size: 12px;
+      line-height: 1.2em;
+      color: #9B9B9B; }
+      .plan-list .plan .plan-info .plan-time span {
+        font-size: 11px; }
     .plan-list .plan .plan-info .type-icon {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -150,30 +184,29 @@ strong {
       margin: 0; }
       .plan-list .plan .plan-data ul li {
         margin: 8px 0; }
-  .plan-list .plan::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    top: 0;
-    bottom: 0;
-    left: 24px;
-    background: #D8D8D8; }
   .plan-list .plan.plan-place .plan-info .type-icon {
     border: 4px solid #F8333C;
     background-color: white; }
   .plan-list .plan.plan-transition, .plan-list .plan.plan-house {
-    padding: 16px 16px 16px 52px;
+    padding: 16px 16px 16px 80px;
     background: #F6F6F6; }
     .plan-list .plan.plan-transition .plan-info, .plan-list .plan.plan-house .plan-info {
       font-size: 14px;
       color: #6C6C6C;
       line-height: 24px; }
+      .plan-list .plan.plan-transition .plan-info .plan-time, .plan-list .plan.plan-house .plan-info .plan-time {
+        top: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
   .plan-list .plan.plan-house {
     background-color: #1F2635; }
     .plan-list .plan.plan-house::before {
       background-color: #4E5C79; }
     .plan-list .plan.plan-house .plan-info {
       color: #6C778E; }
+      .plan-list .plan.plan-house .plan-info .plan-time {
+        color: #6C778E; }
       .plan-list .plan.plan-house .plan-info .type-icon {
         background-color: #4E5C79; }
       .plan-list .plan.plan-house .plan-info .place-icon {
