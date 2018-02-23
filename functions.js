@@ -4,6 +4,7 @@ xmlhttp.onreadystatechange = function() {
         var itinerary = JSON.parse(this.responseText);
 
         if( $(".day") > 0) {
+            console.log("es un dia");
             var day = itinerary[$(".day").attr('id')];
 
             console.log(day);
