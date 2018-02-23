@@ -5,7 +5,7 @@ xmlhttp.onreadystatechange = function() {
 
         console.log($(".day"));
 
-        if( $(".day") > 0) {
+        if( $(".day").length) {
             console.log("es un dia");
             var day = itinerary[$(".day").attr('id')];
 
