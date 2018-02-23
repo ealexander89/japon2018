@@ -3,6 +3,8 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var itinerary = JSON.parse(this.responseText);
 
+        console.log($(".day"));
+
         if( $(".day") > 0) {
             console.log("es un dia");
             var day = itinerary[$(".day").attr('id')];
