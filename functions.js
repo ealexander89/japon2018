@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $.getJSON("./itinerary.json", function( data ) {
+    $.getJSON("https://ealexander89.github.io/japon2018/itinerary.json", function( data ) {
         var items = [];
         console.log(data);
     });
