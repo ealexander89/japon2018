@@ -8,8 +8,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../styles/styles.css" rel="stylesheet" >
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../functions.js"></script>
 </head>
-<body id="day1">
+<body class="day" id="day1">
     <header class="main-header">
         <a href="../index.html" class="back">
             <i class="material-icons">arrow_back</i>
@@ -19,24 +22,28 @@
     </header>
     <div class="plan-list">
         <!-- PLACE -->
-        <a class="plan plan-place" href="https://goo.gl/maps/HPCefrKKiHM2">
-            <div class="plan-info">
-                <p class="plan-time">
-                    02:00PM
-                    <span>
-                    [2hrs]
-                    </span>
-                </p>
-                <p class="main-title">
-                    <strong>
+        <div class="plan type-plane">
+            <span class="plan-icon">
+                <i class="material-icons">airplanemode_active</i>
+            </span>
+            <p class="plan-time">
+                02:00PM
+            </p>
+            <h3 class="plan-title">
+                <a href="https://goo.gl/maps/HPCefrKKiHM2">
                     Aeropuesto de Narita
-                    </strong>
-                </p>
-            </div>
+                </a>
+            </h3>
+            <p class="plan-data">
+                <span class="plan-duration">
+                    <i class="material-icons">timer</i>
+                    02:00hrs
+                </span>
+            </p>
             <figure>
                 <img src="../images/stations/station-narita-airport.jpg">
             </figure>
-            <div class="plan-data">
+            <div class="plan-info">
                 <ul>
                     <li>
                         Recoger el WiFi en el Post Office.
@@ -44,116 +51,102 @@
                     <li>
                         Hacer cambio los $ a ¥
                     <li>
-                        Comer una rica pizza de Teriyaki.
+                        Comer una rica pizza de Teriyaki. - ¥300
                     </li>
                     <li>
-                        Comprar el N’EX Tokyo Round Trip Ticket (¥4,000)
+                        Comprar el N’EX Tokyo Round Trip Ticket - ¥4,000
                     </li>
                 </ul>
             </div>
-        </a>
+        </div>
         <!-- TRANSITION -->
-        <a href="https://goo.gl/maps/62u1T2fHPu12" class="plan plan-transition">
-            <div class="plan-info">
-                <p class="plan-time">
-                    <span>
-                    [1:33hrs]
-                    </span>
-                </p>
-                <p>
-                    <i class="material-icons">train</i>
+        <div class="plan type-transition">
+            <span class="plan-icon">
+                <i class="material-icons">train</i>
+            </span>
+            <p class="plan-time">
+                04:00PM
+            </p>
+            <h3 class="plan-title">
+                <a href="https://goo.gl/maps/62u1T2fHPu12">
                     Yokohama Station
-                </p>
-            </div>
+                </a>
+            </h3>
+            <p class="plan-data">
+                <span class="plan-duration">
+                    <i class="material-icons">timer</i>
+                    02:00hrs
+                </span>
+            </p>
+        </div>
+        <!-- WALK TRANSITION -->
+        <a href="https://goo.gl/maps/62u1T2fHPu12" class="plan type-walk-transition">
+            <span class="plan-icon">
+                <i class="material-icons">directions_walk</i>
+            </span>
+            <p class="plan-time">
+                04:00PM
+            </p>
+            <h3 class="plan-title">
+                Yokohama Station
+            </h3>
+            <p class="plan-data">
+                <span class="plan-duration">
+                    <i class="material-icons">timer</i>
+                    02:00hrs
+                </span>
+                <span class="plan-distance">
+                    <i class="material-icons">show_chart</i>
+                    1km
+                </span>
+            </p>
         </a>
-        <!-- TRANSITION -->
-        <a href="https://goo.gl/maps/TTksK8tpevN2" class="plan plan-transition">
-            <div class="plan-info">
-                <p class="plan-time">
-                    <span>
-                    [10min]
-                    </span>
-                </p>
-                <p>
-                    <i class="material-icons">train</i>
-                    Higashi-Kanagawa Station - ¥140
-                </p>
-            </div>
-        </a>
-        <!-- HOUSE -->
-        <a href="https://goo.gl/maps/pH4T7yht4wx" class="plan plan-house">
-            <div class="plan-info">
-                <p class="plan-time">
-                    06:00PM
-                    <span>
-                    [30min]
-                    </span>
-                </p>
-                <p>
-                    <i class="material-icons">home</i>
-                    Apartamento
-                </p>
-            </div>
-        </a>
-        <!-- TRANSITION -->
-        <a href="https://goo.gl/maps/toht4Hm2Vvu" class="plan plan-transition">
-            <div class="plan-info">
-                <p class="plan-time">
-                    <span>
-                    [20min]
-                    </span>
-                </p>
-                <p>
-                    <i class="material-icons">train</i>
-                    Shin-Yokohama Station - ¥170
-                </p>
-            </div>
-        </a>
-        <!-- PLACE -->
-        <a class="plan plan-place" href="https://goo.gl/maps/XMpDHsJVmSk">
-            <div class="plan-info">
-                <p class="plan-time">
-                    07:00PM
-                    <span>
-                    [2hrs]
-                    </span>
-                </p>
-                <p class="main-title">
-                    <strong>
-                    Shinyokohama Ramen Museum
-                    </strong>
-                </p>
-            </div>
-            <figure>
-                <img src="../images/day1/ramen-museum.jpg">
-            </figure>
-        </a>
-        <!-- TRANSITION -->
-        <a href="https://goo.gl/maps/TTksK8tpevN2" class="plan plan-transition">
-            <div class="plan-info">
-                <p class="plan-time">
-                    <span>
-                    [20min]
-                    </span>
-                </p>
-                <p>
-                    <i class="material-icons">train</i>
-                    Higashi-Kanagawa Station - ¥170
-                </p>
-            </div>
+        <!-- FOOD -->
+        <a href="https://goo.gl/maps/62u1T2fHPu12" class="plan type-food">
+            <span class="plan-icon">
+                <i class="material-icons">restaurant</i>
+            </span>
+            <p class="plan-time">
+                04:00PM
+            </p>
+            <h3 class="plan-title">
+                Yokohama Station
+            </h3>
+            <p class="plan-data">
+                <span class="plan-duration">
+                    <i class="material-icons">timer</i>
+                    02:00hrs
+                </span>
+                <span class="plan-distance">
+                    <i class="material-icons">show_chart</i>
+                    1km
+                </span>
+                <span class="plan-price">
+                    ¥4,000
+                </span>
+            </p>
         </a>
         <!-- HOUSE -->
-        <a href="https://goo.gl/maps/pH4T7yht4wx" class="plan plan-house">
-            <div class="plan-info">
-                <p class="plan-time">
-                    9:30PM
-                </p>
-                <p>
-                    <i class="material-icons">home</i>
-                    Apartamento
-                </p>
-            </div>
+        <a href="https://goo.gl/maps/62u1T2fHPu12" class="plan type-house">
+            <span class="plan-icon">
+                <i class="material-icons">home</i>
+            </span>
+            <p class="plan-time">
+                04:00PM
+            </p>
+            <h3 class="plan-title">
+                Yokohama Station
+            </h3>
+            <p class="plan-data">
+                <span class="plan-duration">
+                    <i class="material-icons">timer</i>
+                    02:00hrs
+                </span>
+                <span class="plan-distance">
+                    <i class="material-icons">show_chart</i>
+                    1km
+                </span>
+            </p>
         </a>
-    </div>
 </body>
 </html>

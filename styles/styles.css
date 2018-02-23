@@ -2,7 +2,8 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
-  color: #333; }
+  color: #333;
+  background: #F8F9FA; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -22,7 +23,7 @@ strong {
   font-weight: 500; }
 
 .main-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   margin-bottom: 4px; }
 
@@ -92,7 +93,7 @@ strong {
     text-align: center;
     font-size: 14px;
     font-weight: 300;
-    border: 1px solid #D8D8D8;
+    border: 1px solid #D9E0EB;
     border-width: 0 0 1px 1px; }
     .main-nav a:first-child {
       border-left-width: 0; }
@@ -102,55 +103,68 @@ strong {
   padding-left: 0;
   margin-top: 0; }
   .days-index li {
-    border-bottom: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D9E0EB;
     margin: 0; }
     .days-index li a {
       display: block;
       padding: 24px 32px; }
 
-.plan-list .plan {
-  position: relative;
-  display: block;
-  padding: 24px 16px 24px 80px;
-  border-bottom: 1px solid #D8D8D8; }
-  .plan-list .plan figure {
-    overflow: hidden;
-    margin: 0;
-    margin: 8px 0;
-    border-radius: 4px; }
-    .plan-list .plan figure img {
-      display: block;
-      max-width: 100%; }
-  .plan-list .plan::before {
-    content: '';
-    position: absolute;
-    width: 1px;
-    top: 0;
-    bottom: 0;
-    left: 64px;
-    background: #D8D8D8; }
-  .plan-list .plan .plan-info {
-    position: relative; }
-    .plan-list .plan .plan-info .plan-time {
+.plan-list {
+  margin-top: 32px; }
+  .plan-list .plan {
+    position: relative;
+    display: block;
+    padding: 1px 16px 32px 56px; }
+    .plan-list .plan::before {
+      content: '';
       position: absolute;
-      top: 2px;
-      left: -80px;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      left: 32px;
+      background: #D9E0EB; }
+    .plan-list .plan figure {
+      overflow: hidden;
+      margin: 0;
+      margin: 8px 0;
+      border-radius: 4px; }
+      .plan-list .plan figure img {
+        display: block;
+        max-width: 100%; }
+    .plan-list .plan .plan-icon {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      width: 64px;
-      height: 28px;
-      padding-left: 8px;
-      padding-right: 8px;
-      font-size: 12px;
-      line-height: 1.2em;
-      color: #9B9B9B;
-      text-align: center; }
-    .plan-list .plan .plan-info .type-icon {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: absolute;
+      left: 23px;
+      top: -2px;
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      color: #1F2635;
+      background-color: #F8F9FA; }
+      .plan-list .plan .plan-icon i {
+        font-size: 19px; }
+    .plan-list .plan .plan-time {
+      font-size: 14px;
+      line-height: 1em;
+      color: #ACADC2; }
+    .plan-list .plan .plan-title {
+      margin: 0;
+      color: #5F748D;
+      font-size: 14px; }
+      .plan-list .plan .plan-title a,
+      .plan-list .plan .plan-title span {
+        display: inline-block;
+        padding: 4px 0;
+        color: inherit; }
+    .plan-list .plan .type-icon {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -169,48 +183,51 @@ strong {
       background-color: #6C6C6C;
       border-radius: 50%;
       color: white; }
-      .plan-list .plan .plan-info .type-icon i.material-icons {
+      .plan-list .plan .type-icon i.material-icons {
         font-size: 16px; }
-    .plan-list .plan .plan-info .place-icon {
-      position: absolute;
-      top: 0;
-      right: 0;
+    .plan-list .plan .plan-data {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 12px;
+      color: #93A5BA; }
+      .plan-list .plan .plan-data span {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 4px;
+        border-right: 1px solid #93A5BA; }
+        .plan-list .plan .plan-data span:first-child {
+          padding-left: 0; }
+        .plan-list .plan .plan-data span:last-child {
+          border-right: 0; }
+      .plan-list .plan .plan-data i {
+        font-size: 14px; }
+    .plan-list .plan .plan-info {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #93A5BA; }
+      .plan-list .plan .plan-info ul {
+        padding-left: 16px;
+        margin: 0; }
+        .plan-list .plan .plan-info ul li {
+          margin: 8px 0; }
+    .plan-list .plan.type-place .plan-icon {
+      color: #00C853; }
+    .plan-list .plan.type-transition .plan-icon, .plan-list .plan.type-plane .plan-icon {
       color: #3574FF; }
-  .plan-list .plan .plan-data {
-    margin-top: 16px;
-    font-size: 13px; }
-    .plan-list .plan .plan-data ul {
-      padding-left: 16px;
-      margin: 0; }
-      .plan-list .plan .plan-data ul li {
-        margin: 8px 0; }
-  .plan-list .plan.plan-place .plan-info .type-icon {
-    border: 4px solid #F8333C;
-    background-color: white; }
-  .plan-list .plan.plan-transition, .plan-list .plan.plan-house {
-    padding: 16px 16px 16px 80px;
-    background: #F6F6F6; }
-    .plan-list .plan.plan-transition .plan-info, .plan-list .plan.plan-house .plan-info {
-      font-size: 14px;
-      color: #6C6C6C;
-      line-height: 24px; }
-      .plan-list .plan.plan-transition .plan-info .plan-time, .plan-list .plan.plan-house .plan-info .plan-time {
-        top: 0;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; }
-  .plan-list .plan.plan-house {
-    background-color: #1F2635; }
-    .plan-list .plan.plan-house::before {
-      background-color: #4E5C79; }
-    .plan-list .plan.plan-house .plan-info {
-      color: #6C778E; }
-      .plan-list .plan.plan-house .plan-info .plan-time {
-        color: #6C778E; }
-      .plan-list .plan.plan-house .plan-info .type-icon {
-        background-color: #4E5C79; }
-      .plan-list .plan.plan-house .plan-info .place-icon {
-        color: #4E5C79; }
+    .plan-list .plan.type-walk-transition .plan-icon {
+      color: #546E7A; }
+    .plan-list .plan.type-food .plan-icon {
+      color: #FFC400; }
+    .plan-list .plan.type-house .plan-icon {
+      color: #C62828; }
 
 #homepage .main-header {
   background-image: url(../images/homepage.jpg); }

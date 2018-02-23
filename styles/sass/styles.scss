@@ -4,17 +4,28 @@ $color-gray: #9B9B9B;
 $color-gray-dark: #6C6C6C;
 $color-gray-light: #F6F6F6;
 $color-blue: #3574FF;
+$color-green: #00C853;
 $color-home: #1F2635;
 $color-home-line: #4E5C79;
 $color-home-text: #6C778E;
 $color-red: #F8333C;
-$color-border: #D8D8D8;
+$color-border: #D9E0EB;
+$color-text-hour: #ACADC2;
+$color-text-title: #5F748D;
+$color-text-info: #93A5BA;
+$color-plan-place: $color-green;
+$color-plan-transition: $color-blue;
+$color-plan-walk: #546E7A;
+$color-plan-food: #FFC400;
+$color-plan-house: #C62828;
+$color-background: #F8F9FA;
 
 body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
     color: $color-black;
+    background: $color-background;
 }
 
 * {
@@ -42,7 +53,7 @@ strong {
 
 // Texts
 .main-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     margin-bottom: 4px;
 }
@@ -140,11 +151,22 @@ strong {
 
 // Plan list
 .plan-list {
+    margin-top: 32px;
+
     .plan {
         position: relative;
         display: block;
-        padding: 24px 16px 24px 80px;
-        border-bottom: 1px solid $color-border;
+        padding: 1px 16px 32px 56px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            top: 0;
+            bottom: 0;
+            left: 32px;
+            background: $color-border;
+        }
 
         figure {
             overflow: hidden;
@@ -158,65 +180,93 @@ strong {
             }
         }
 
-        &::before {
-            content: '';
+        .plan-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
-            width: 1px;
-            top: 0;
-            bottom: 0;
-            left: 64px;
-            background: $color-border;
+            left: 23px;
+            top: -2px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            color: $color-home;
+            background-color: $color-background;
+            // border: 3px solid $color-text-hour;
+
+            i {
+                font-size: 19px;
+            }
         }
 
-        .plan-info {
-            position: relative;
+        .plan-time {
+            font-size: 14px;
+            line-height: 1em;
+            color: $color-text-hour;
+        }
 
-            .plan-time {
-                position: absolute;
-                top: 2px;
-                left: -80px;
-                display: flex;
-                flex-direction: column;
-                width: 64px;
-                height: 28px;
-                padding-left: 8px;
-                padding-right: 8px;
-                font-size: 12px;
-                line-height: 1.2em;
-                color: $color-gray;
-                text-align: center;
+        .plan-title {
+            margin: 0;
+            color: $color-text-title;
+            font-size: 14px;
+
+            a,
+            span {
+                display: inline-block;
+                padding: 4px 0;
+                color: inherit;
+            }
+        }
+
+        .type-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            position: absolute;
+            left: -38px;
+            width: 24px;
+            height: 24px;
+            background-color: $color-gray-dark;
+            border-radius: 50%;
+            color: white;
+
+            i.material-icons {
+                font-size: 16px;
             }
 
-            .type-icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-sizing: border-box;
-                position: absolute;
-                left: -38px;
-                width: 24px;
-                height: 24px;
-                background-color: $color-gray-dark;
-                border-radius: 50%;
-                color: white;
-
-                i.material-icons {
-                    font-size: 16px;
-                }
-
-            }
-
-            .place-icon {
-                position: absolute;
-                top: 0;
-                right: 0;
-                color: $color-blue;
-            }
         }
 
         .plan-data {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: $color-text-info;
+
+            span {
+                display: flex;
+                align-items: center;
+                padding: 0 4px;
+                border-right: 1px solid $color-text-info;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            i {
+                font-size: 14px;
+            }
+        }
+
+        .plan-info {
             margin-top: 16px;
             font-size: 13px;
+            color: $color-text-info;
 
             ul {
                 padding-left: 16px;
@@ -228,51 +278,34 @@ strong {
             }
         }
 
-        &.plan-place {
-            .plan-info {
-                .type-icon {
-                    border: 4px solid $color-red;
-                    background-color: white;
-                }
+        &.type-place {
+            .plan-icon {
+                color: $color-plan-place;
             }
         }
 
-        &.plan-transition,
-        &.plan-house {
-            padding: 16px 16px 16px 80px;
-            background: $color-gray-light;
-
-            .plan-info {
-                .plan-time { 
-                    top: 0;
-                    justify-content: center;
-                }
-                font-size: 14px;
-                color: $color-gray-dark;
-                line-height: 24px;
+        &.type-transition,
+        &.type-plane {
+            .plan-icon {
+                color: $color-plan-transition;
             }
         }
 
-        &.plan-house {
-            background-color: $color-home;
-
-            &::before { 
-                background-color: $color-home-line;
+        &.type-walk-transition {
+            .plan-icon {
+                color: $color-plan-walk;
             }
-            .plan-info {
-                color: $color-home-text;
-                
-                .plan-time {
-                    color: $color-home-text;                        
-                }
+        }
 
-                .type-icon {
-                    background-color: $color-home-line;
-                }
-                
-                .place-icon {
-                    color: $color-home-line;
-                }
+        &.type-food {
+            .plan-icon {
+                color: $color-plan-food;
+            }
+        }
+
+        &.type-house {
+            .plan-icon {
+                color: $color-plan-house;
             }
         }
     }
