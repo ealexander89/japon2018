@@ -1,11 +1,11 @@
 {
     "day1": {
-        "day-name": "Martes 27",
+        "title": "Martes 27",
         "place": "Yokohama",
-        "start-time": "2018-03-27 14:00",
+        "start": "2018-03-27 14:00",
         "plan": [
             {
-                "name": "Aeropuerto de Narita 2",
+                "title": "Aeropuerto de Narita 2",
                 "type": "plane",
                 "duration": 30,
                 "image": "../images/stations/station-narita-airport.jpg",
@@ -16,23 +16,23 @@
                 },
                 "info": [
                     {
-                        "info-text": "Recoger el WiFi en el Post Office",
-                        "info-url": "https://goo.gl/maps/HPCefrKKiHM2"
+                        "text": "Recoger el WiFi en el Post Office",
+                        "url": "https://goo.gl/maps/HPCefrKKiHM2"
                     },
                     {
-                        "info-text": "Hacer cambio los $ a ¥"
+                        "text": "Hacer cambio los $ a ¥"
                     },
                     {
-                        "info-text": "Comer una rica pizza de Teriyaki. - ¥300"
+                        "text": "Comer una rica pizza de Teriyaki. - ¥300"
                     },
                     {
-                        "info-text":  "Comprar el N’EX Tokyo Round Trip Ticket - ¥4,000"
+                        "text":  "Comprar el N’EX Tokyo Round Trip Ticket - ¥4,000"
                     }
                 ]
             },
             
             {
-                "name": "Aeropuerto de Narita",
+                "title": "Aeropuerto de Narita",
                 "type": "place",
                 "duration": 240,
                 "distance": "2.5km",
