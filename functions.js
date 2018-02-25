@@ -2,7 +2,11 @@
 
 var planIcons = {
     plane: "airplanemode_active",
-    place: "place"
+    place: "place",
+    transition: "train",
+    food: "restaurant",
+    walk: "directions-walk",
+    house: "home"
 }
 
 var xmlhttp = new XMLHttpRequest();
@@ -29,7 +33,7 @@ xmlhttp.onreadystatechange = function() {
             var priceTotal = 0;
 
             $.each( day.plan , function( index, plan ) {
-                planDuration = moment(plan.duration, 'hh:mm').format('hh:mm');
+                planDuration = moment(plan.duration, 'hh:mm');
 
                 var planHtml = '<div class="plan type-'+ plan.type +'">' +
                 // PLAN ICON
@@ -46,7 +50,7 @@ xmlhttp.onreadystatechange = function() {
                     '<p class="plan-data">' +
                         '<span class="plan-data-item">' +
                             '<i class="material-icons">timer</i>' +
-                            planDuration +
+                            planDuration.format('HH:mm') +
                         '</span>';
                 // PLAN DATA - DISTANCE
                 if( plan.distance ) {
@@ -126,7 +130,8 @@ xmlhttp.onreadystatechange = function() {
                 $(".plan-list").append( planHtml );
 
                 // ADD TIME
-                time.add(plan.duration, 'minutes');
+                var durationInMinutes = planDuration.hours() * 60 + planDuration.minutes()
+                time.add(durationInMinutes, 'minutes');
                 planTime = time.format("hh:mm A");
             });
             

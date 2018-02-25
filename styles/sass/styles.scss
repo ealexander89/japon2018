@@ -169,7 +169,11 @@ strong {
         }
 
         figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
+            max-height: 100px;
             margin: 0;
             margin: 8px 0;
             border-radius: 4px;
@@ -297,7 +301,7 @@ strong {
             }
         }
 
-        &.type-walk-transition {
+        &.type-walk {
             .plan-icon {
                 color: $color-plan-walk;
             }

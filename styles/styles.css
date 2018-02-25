@@ -124,7 +124,17 @@ strong {
       left: 32px;
       background: #D9E0EB; }
     .plan-list .plan figure {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       overflow: hidden;
+      max-height: 100px;
       margin: 0;
       margin: 8px 0;
       border-radius: 4px; }
@@ -229,7 +239,7 @@ strong {
       color: #00C853; }
     .plan-list .plan.type-transition .plan-icon, .plan-list .plan.type-plane .plan-icon {
       color: #3574FF; }
-    .plan-list .plan.type-walk-transition .plan-icon {
+    .plan-list .plan.type-walk .plan-icon {
       color: #546E7A; }
     .plan-list .plan.type-food .plan-icon {
       color: #FFC400; }
