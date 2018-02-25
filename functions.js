@@ -1,4 +1,4 @@
-moment().format();
+
 
 var planIcons = {
     plane: "airplanemode_active",
@@ -16,9 +16,6 @@ xmlhttp.onreadystatechange = function() {
             console.log("es un dia");
             var day = itinerary[$(".day").attr('id')];
             var time = moment(day.start, "YYYY-MM-DD hh:mm A");
-            console.log(time.hours());
-            console.log(time.minutes());
-            
 
             $('.main-header .title').text(day.title);
             $('.main-header .sub-title').text(day.place);
