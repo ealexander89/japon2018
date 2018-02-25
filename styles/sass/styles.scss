@@ -240,13 +240,15 @@ strong {
         .plan-data {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             font-size: 12px;
             color: $color-text-info;
 
-            span {
+            .plan-data-item {
                 display: flex;
                 align-items: center;
                 padding: 0 4px;
+                padding-bottom: 4px;
                 border-right: 1px solid $color-text-info;
 
                 &:first-child {
@@ -260,6 +262,7 @@ strong {
 
             i {
                 font-size: 14px;
+                margin-right: 2px;
             }
         }
 

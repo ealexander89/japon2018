@@ -192,9 +192,11 @@ strong {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
       font-size: 12px;
       color: #93A5BA; }
-      .plan-list .plan .plan-data span {
+      .plan-list .plan .plan-data .plan-data-item {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -202,13 +204,15 @@ strong {
         -ms-flex-align: center;
         align-items: center;
         padding: 0 4px;
+        padding-bottom: 4px;
         border-right: 1px solid #93A5BA; }
-        .plan-list .plan .plan-data span:first-child {
+        .plan-list .plan .plan-data .plan-data-item:first-child {
           padding-left: 0; }
-        .plan-list .plan .plan-data span:last-child {
+        .plan-list .plan .plan-data .plan-data-item:last-child {
           border-right: 0; }
       .plan-list .plan .plan-data i {
-        font-size: 14px; }
+        font-size: 14px;
+        margin-right: 2px; }
     .plan-list .plan .plan-info {
       margin-top: 16px;
       font-size: 13px;

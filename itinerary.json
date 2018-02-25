@@ -15,10 +15,19 @@
                     "food": 300
                 },
                 "info": [
-                    "Recoger el WiFi en el Post Office",
-                    "Hacer cambio los $ a ¥",
-                    "Comer una rica pizza de Teriyaki. - ¥300",
-                    "Comprar el N’EX Tokyo Round Trip Ticket - ¥4,000"
+                    {
+                        "info-text": "Recoger el WiFi en el Post Office",
+                        "info-url": "https://goo.gl/maps/HPCefrKKiHM2"
+                    },
+                    {
+                        "info-text": "Hacer cambio los $ a ¥"
+                    },
+                    {
+                        "info-text": "Comer una rica pizza de Teriyaki. - ¥300"
+                    },
+                    {
+                        "info-text":  "Comprar el N’EX Tokyo Round Trip Ticket - ¥4,000"
+                    }
                 ]
             },
             
@@ -27,20 +36,13 @@
                 "type": "place",
                 "duration": 240,
                 "distance": "2.5km",
-                "image": "../images/stations/station-narita-airport.jpg",
                 "map": "https://goo.gl/maps/HPCefrKKiHM2",
                 "price": {
                     "transport": 4000,
                     "food": 300,
                     "tickets": 5430,
                     "others": 434
-                },
-                "info": [
-                    "Recoger el WiFi en el Post Office",
-                    "Hacer cambio los $ a ¥",
-                    "Comer una rica pizza de Teriyaki. - ¥300",
-                    "Comprar el N’EX Tokyo Round Trip Ticket - ¥4,000"
-                ]
+                }
             }
         ]
     }
