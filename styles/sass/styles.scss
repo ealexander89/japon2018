@@ -270,13 +270,16 @@ strong {
             margin-top: 16px;
             font-size: 13px;
             color: $color-text-info;
+            padding-left: 16px;
+            margin: 0;
+            margin-top: 8px;
+                
+            li {
+                padding: 4px 0;
 
-            ul {
-                padding-left: 16px;
-                margin: 0;
-
-                li {
-                    margin: 8px 0;
+                a {
+                    color: inherit;
+                    border-bottom: 1px dashed $color-text-info;
                 }
             }
         }

@@ -216,12 +216,15 @@ strong {
     .plan-list .plan .plan-info {
       margin-top: 16px;
       font-size: 13px;
-      color: #93A5BA; }
-      .plan-list .plan .plan-info ul {
-        padding-left: 16px;
-        margin: 0; }
-        .plan-list .plan .plan-info ul li {
-          margin: 8px 0; }
+      color: #93A5BA;
+      padding-left: 16px;
+      margin: 0;
+      margin-top: 8px; }
+      .plan-list .plan .plan-info li {
+        padding: 4px 0; }
+        .plan-list .plan .plan-info li a {
+          color: inherit;
+          border-bottom: 1px dashed #93A5BA; }
     .plan-list .plan.type-place .plan-icon {
       color: #00C853; }
     .plan-list .plan.type-transition .plan-icon, .plan-list .plan.type-plane .plan-icon {

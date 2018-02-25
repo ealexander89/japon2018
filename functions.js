@@ -1,3 +1,5 @@
+moment().format();
+
 var planIcons = {
     plane: "airplanemode_active",
     place: "place"
@@ -13,9 +15,13 @@ xmlhttp.onreadystatechange = function() {
         if( $(".day").length) {
             console.log("es un dia");
             var day = itinerary[$(".day").attr('id')];
+            var time = moment(day.start, "YYYY-MM-DD hh:mm A");
+            console.log(time.hours());
+            console.log(time.minutes());
+            
 
-            $('.main-header .title').text(day['day-name']);
-            $('.main-header .sub-title').text(day['place']);
+            $('.main-header .title').text(day.title);
+            $('.main-header .sub-title').text(day.place);
 
             var planTime = '02:00PM';
             var planDuration;
@@ -25,7 +31,7 @@ xmlhttp.onreadystatechange = function() {
             var priceOthers = 0;
             var priceTotal = 0;
 
-            $.each( day['plan'] , function( index, plan ) {
+            $.each( day.plan , function( index, plan ) {
                 planDuration = '02:00hrs';
 
                 var planHtml = '<div class="plan type-'+ plan.type +'">' +
@@ -36,7 +42,7 @@ xmlhttp.onreadystatechange = function() {
                     '<p class="plan-time">' + planTime + '</p>' +
                 // PLAN TITLE
                     '<h3 class="plan-title">' +
-                        '<a href="' + plan.map + '">' + plan.name + '</a>' +
+                        '<a href="' + plan.map + '">' + plan.title + '</a>' +
                     '</h3>' +
                 // PLAN DATA - DURATION
                     '<p class="plan-data">' +
@@ -101,6 +107,22 @@ xmlhttp.onreadystatechange = function() {
                     '</figure>';
                 }
 
+                // PLAN INFO
+                if( plan.info ) {
+                    planHtml += '<ul class="plan-info">';
+                    $.each( plan.info , function( info_index, info ) {
+                        planHtml += '<li>';
+                        if( info.url ) {
+                            planHtml += '<a href="'+ info.url +'">'+ info.text +'</a>';
+                        } else {
+                            planHtml += info.text;
+                        }
+                        planHtml += '</li>';
+                    });
+                    planHtml += '</ul>';
+                }
+
+                // CLOSING PLAN
                 planHtml += '</div>';
 
                 $(".plan-list").append( planHtml );
