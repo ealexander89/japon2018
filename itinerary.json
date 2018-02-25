@@ -7,7 +7,7 @@
             {
                 "title": "Aeropuerto de Narita 2",
                 "type": "plane",
-                "duration": 75,
+                "duration": "01:15",
                 "image": "../images/stations/station-narita-airport.jpg",
                 "map": "https://goo.gl/maps/HPCefrKKiHM2",
                 "price": {
@@ -34,7 +34,7 @@
             {
                 "title": "Aeropuerto de Narita",
                 "type": "place",
-                "duration": 240,
+                "duration": "00:15",
                 "distance": "2.5km",
                 "map": "https://goo.gl/maps/HPCefrKKiHM2",
                 "price": {
