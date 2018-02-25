@@ -15,12 +15,12 @@ xmlhttp.onreadystatechange = function() {
         if( $(".day").length) {
             console.log("es un dia");
             var day = itinerary[$(".day").attr('id')];
-            var time = moment(day.start, "YYYY-MM-DD hh:mm A");
+            var time = moment(day.date, "YYYY-MM-DD hh:mm A");
 
             $('.main-header .title').text(day.title);
             $('.main-header .sub-title').text(day.place);
 
-            var planTime = '02:00PM';
+            var planTime = time.format("hh:mm A");
             var planDuration;
             var priceTransport = 0;
             var priceFood = 0;
@@ -29,13 +29,14 @@ xmlhttp.onreadystatechange = function() {
             var priceTotal = 0;
 
             $.each( day.plan , function( index, plan ) {
-                planDuration = '02:00hrs';
+                planDuration = moment(plan.duration, 'hh:mm').format('hh:mm');
 
                 var planHtml = '<div class="plan type-'+ plan.type +'">' +
                 // PLAN ICON
                     '<span class="plan-icon">' +
                         '<i class="material-icons">' + planIcons[plan.type] + '</i>' +
                     '</span>' + 
+                // PLAN TIME
                     '<p class="plan-time">' + planTime + '</p>' +
                 // PLAN TITLE
                     '<h3 class="plan-title">' +
@@ -123,6 +124,10 @@ xmlhttp.onreadystatechange = function() {
                 planHtml += '</div>';
 
                 $(".plan-list").append( planHtml );
+
+                // ADD TIME
+                time.add(plan.duration, 'minutes');
+                planTime = time.format("hh:mm A");
             });
             
         }
