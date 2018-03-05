@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
-  color: #333;
+  color: #5F748D;
   background: #F8F9FA; }
 
 * {
@@ -13,7 +13,7 @@ i {
   vertical-align: middle; }
 
 a {
-  color: #333;
+  color: #5F748D;
   text-decoration: none; }
 
 p {
@@ -29,7 +29,7 @@ strong {
 
 .date-gray {
   font-size: 14px;
-  color: #9B9B9B;
+  color: #93A5BA;
   font-weight: 300; }
 
 .main-header {
@@ -123,24 +123,6 @@ strong {
       bottom: 0;
       left: 32px;
       background: #D9E0EB; }
-    .plan-list .plan figure {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      overflow: hidden;
-      max-height: 100px;
-      margin: 0;
-      margin: 8px 0;
-      border-radius: 4px; }
-      .plan-list .plan figure img {
-        display: block;
-        max-width: 100%; }
     .plan-list .plan .plan-icon {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -165,15 +147,116 @@ strong {
       font-size: 14px;
       line-height: 1em;
       color: #ACADC2; }
-    .plan-list .plan .plan-title {
-      margin: 0;
-      color: #5F748D;
-      font-size: 14px; }
-      .plan-list .plan .plan-title a,
-      .plan-list .plan .plan-title span {
-        display: inline-block;
-        padding: 4px 0;
-        color: inherit; }
+    .plan-list .plan .plan-data-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 4px; }
+      .plan-list .plan .plan-data-container .plan-title {
+        position: relative;
+        z-index: 100;
+        margin: 0;
+        color: #5F748D;
+        font-size: 14px; }
+        .plan-list .plan .plan-data-container .plan-title a,
+        .plan-list .plan .plan-data-container .plan-title span {
+          display: inline-block;
+          padding: 4px 0;
+          color: inherit; }
+      .plan-list .plan .plan-data-container .plan-data {
+        position: relative;
+        z-index: 100;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: #93A5BA; }
+        .plan-list .plan .plan-data-container .plan-data .plan-data-item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding: 2px 4px;
+          border-right: 1px solid #93A5BA; }
+          .plan-list .plan .plan-data-container .plan-data .plan-data-item:first-child {
+            padding-left: 0; }
+          .plan-list .plan .plan-data-container .plan-data .plan-data-item:last-child {
+            border-right: 0; }
+        .plan-list .plan .plan-data-container .plan-data i {
+          font-size: 14px;
+          margin-right: 2px; }
+      .plan-list .plan .plan-data-container.with-image {
+        overflow: hidden;
+        height: 150px;
+        border-radius: 4px;
+        padding: 12px 16px;
+        margin-top: 4px;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+        .plan-list .plan .plan-data-container.with-image::before {
+          content: '';
+          z-index: 50;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e2137+0,0e2137+98&0+20,0.65+70,0.9+100 */
+          background: -moz-linear-gradient(top, rgba(14, 33, 55, 0) 0%, rgba(14, 33, 55, 0) 20%, rgba(14, 33, 55, 0.65) 70%, rgba(14, 33, 55, 0.88) 98%, rgba(14, 33, 55, 0.9) 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, rgba(14, 33, 55, 0) 0%, rgba(14, 33, 55, 0) 20%, rgba(14, 33, 55, 0.65) 70%, rgba(14, 33, 55, 0.88) 98%, rgba(14, 33, 55, 0.9) 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 33, 55, 0)), color-stop(20%, rgba(14, 33, 55, 0)), color-stop(70%, rgba(14, 33, 55, 0.65)), color-stop(98%, rgba(14, 33, 55, 0.88)), to(rgba(14, 33, 55, 0.9)));
+          background: -o-linear-gradient(top, rgba(14, 33, 55, 0) 0%, rgba(14, 33, 55, 0) 20%, rgba(14, 33, 55, 0.65) 70%, rgba(14, 33, 55, 0.88) 98%, rgba(14, 33, 55, 0.9) 100%);
+          background: linear-gradient(to bottom, rgba(14, 33, 55, 0) 0%, rgba(14, 33, 55, 0) 20%, rgba(14, 33, 55, 0.65) 70%, rgba(14, 33, 55, 0.88) 98%, rgba(14, 33, 55, 0.9) 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2137', endColorstr='#e60e2137',GradientType=0 );
+          /* IE6-9 */ }
+        .plan-list .plan .plan-data-container.with-image .full-link {
+          z-index: 200;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+        .plan-list .plan .plan-data-container.with-image .plan-title,
+        .plan-list .plan .plan-data-container.with-image .plan-data {
+          color: #F8F9FA; }
+        .plan-list .plan .plan-data-container.with-image .plan-data {
+          opacity: 0.65; }
+        .plan-list .plan .plan-data-container.with-image figure {
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin: 0; }
+          .plan-list .plan .plan-data-container.with-image figure img {
+            display: block;
+            width: 100%; }
     .plan-list .plan .type-icon {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -195,34 +278,6 @@ strong {
       color: white; }
       .plan-list .plan .type-icon i.material-icons {
         font-size: 16px; }
-    .plan-list .plan .plan-data {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      font-size: 12px;
-      color: #93A5BA; }
-      .plan-list .plan .plan-data .plan-data-item {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding: 0 4px;
-        padding-bottom: 4px;
-        border-right: 1px solid #93A5BA; }
-        .plan-list .plan .plan-data .plan-data-item:first-child {
-          padding-left: 0; }
-        .plan-list .plan .plan-data .plan-data-item:last-child {
-          border-right: 0; }
-      .plan-list .plan .plan-data i {
-        font-size: 14px;
-        margin-right: 2px; }
     .plan-list .plan .plan-info {
       margin-top: 16px;
       font-size: 13px;
@@ -248,6 +303,16 @@ strong {
 
 #homepage .main-header {
   background-image: url(../images/homepage.jpg); }
+
+.next-day {
+  position: relative;
+  display: block;
+  padding: 24px;
+  border-top: 1px solid #D9E0EB; }
+  .next-day i {
+    position: absolute;
+    right: 24px;
+    top: 32px; }
 
 #day1 .main-header {
   background-image: url(../images/day1.jpg); }

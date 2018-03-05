@@ -24,7 +24,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-    color: $color-black;
+    color: $color-text-title;
     background: $color-background;
 }
 
@@ -39,7 +39,7 @@ i {
 
 // Resets
 a {
-    color: $color-black;
+    color: $color-text-title;
     text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ strong {
 
 .date-gray {
     font-size: 14px;
-    color: $color-gray;
+    color: $color-text-info;
     font-weight: 300;
 }
 
@@ -168,22 +168,6 @@ strong {
             background: $color-border;
         }
 
-        figure {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            max-height: 100px;
-            margin: 0;
-            margin: 8px 0;
-            border-radius: 4px;
-
-            img {
-                display: block;
-                max-width: 100%;
-            }
-        }
-
         .plan-icon {
             display: flex;
             justify-content: center;
@@ -209,16 +193,115 @@ strong {
             color: $color-text-hour;
         }
 
-        .plan-title {
-            margin: 0;
-            color: $color-text-title;
-            font-size: 14px;
+        .plan-data-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-bottom: 4px;
 
-            a,
-            span {
-                display: inline-block;
-                padding: 4px 0;
-                color: inherit;
+            .plan-title {
+                position: relative;
+                z-index: 100;
+                margin: 0;
+                color: $color-text-title;
+                font-size: 14px;
+    
+                a,
+                span {
+                    display: inline-block;
+                    padding: 4px 0;
+                    color: inherit;
+                }
+            }
+
+            .plan-data {
+                position: relative;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                font-size: 12px;
+                color: $color-text-info;
+    
+                .plan-data-item {
+                    display: flex;
+                    align-items: center;
+                    padding: 2px 4px;
+                    border-right: 1px solid $color-text-info;
+    
+                    &:first-child {
+                        padding-left: 0;
+                    }
+    
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+    
+                i {
+                    font-size: 14px;
+                    margin-right: 2px;
+                }
+            }
+
+            &.with-image {
+                overflow: hidden;
+                height: 150px;
+                border-radius: 4px;
+                padding: 12px 16px;
+                margin-top: 4px;
+                justify-content: flex-end;
+
+                &::before {
+                    content: '';
+                    z-index: 50;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e2137+0,0e2137+98&0+20,0.65+70,0.9+100 */
+                    background: -moz-linear-gradient(top, rgba(14,33,55,0) 0%, rgba(14,33,55,0) 20%, rgba(14,33,55,0.65) 70%, rgba(14,33,55,0.88) 98%, rgba(14,33,55,0.9) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top, rgba(14,33,55,0) 0%,rgba(14,33,55,0) 20%,rgba(14,33,55,0.65) 70%,rgba(14,33,55,0.88) 98%,rgba(14,33,55,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to bottom, rgba(14,33,55,0) 0%,rgba(14,33,55,0) 20%,rgba(14,33,55,0.65) 70%,rgba(14,33,55,0.88) 98%,rgba(14,33,55,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000e2137', endColorstr='#e60e2137',GradientType=0 ); /* IE6-9 */
+                }
+
+                .full-link {
+                    z-index: 200;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                .plan-title,
+                .plan-data {
+                    color: #F8F9FA;
+                }
+
+                .plan-data {
+                    opacity: 0.65;
+                }
+
+                figure {
+                    position: absolute;
+                    z-index: 0;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+        
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
             }
         }
 
@@ -239,35 +322,6 @@ strong {
                 font-size: 16px;
             }
 
-        }
-
-        .plan-data {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            font-size: 12px;
-            color: $color-text-info;
-
-            .plan-data-item {
-                display: flex;
-                align-items: center;
-                padding: 0 4px;
-                padding-bottom: 4px;
-                border-right: 1px solid $color-text-info;
-
-                &:first-child {
-                    padding-left: 0;
-                }
-
-                &:last-child {
-                    border-right: 0;
-                }
-            }
-
-            i {
-                font-size: 14px;
-                margin-right: 2px;
-            }
         }
 
         .plan-info {
@@ -326,6 +380,20 @@ strong {
 #homepage {
     .main-header {
         background-image: url(../images/homepage.jpg);
+    }
+}
+
+//DAYS
+.next-day {
+    position: relative;
+    display: block;
+    padding: 24px;
+    border-top: 1px solid $color-border;
+
+    i {
+        position: absolute;
+        right: 24px;
+        top: 32px;
     }
 }
 

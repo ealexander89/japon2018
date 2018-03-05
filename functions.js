@@ -39,15 +39,28 @@ xmlhttp.onreadystatechange = function() {
                 // PLAN ICON
                     '<span class="plan-icon">' +
                         '<i class="material-icons">' + planIcons[plan.type] + '</i>' +
-                    '</span>' + 
+                    '</span>';
                 // PLAN TIME
-                    '<p class="plan-time">' + planTime + '</p>' +
+                planHtml += '<p class="plan-time">' + planTime + '</p>';
+                
+                if( plan.image ) {
+                    planHtml += '<div class="plan-data-container with-image">';
+                } else {
+                    planHtml += '<div class="plan-data-container">';
+                }
                 // PLAN TITLE
-                    '<h3 class="plan-title">' +
+                if( plan.map ) {
+                    planHtml += '<h3 class="plan-title">' +
                         '<a href="' + plan.map + '">' + plan.title + '</a>' +
-                    '</h3>' +
+                    '</h3>';
+                } else {
+                    planHtml += '<h3 class="plan-title">' +
+                        plan.title +
+                    '</h3>';
+                }
+                
                 // PLAN DATA - DURATION
-                    '<p class="plan-data">' +
+                planHtml += '<p class="plan-data">' +
                         '<span class="plan-data-item">' +
                             '<i class="material-icons">timer</i>' +
                             planDuration.format('HH:mm') +
@@ -107,7 +120,14 @@ xmlhttp.onreadystatechange = function() {
                     planHtml += '<figure>' +
                         '<img src="'+ plan.image +'">' +
                     '</figure>';
+
+                    if( plan.map ) {
+                        planHtml += '<a href="' + plan.map + '" class="full-link"></a>';
+                    }
                 }
+
+                // Close PLAN DATA
+                planHtml += '</div>';
 
                 // PLAN INFO
                 if( plan.info ) {
