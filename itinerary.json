@@ -99,5 +99,107 @@
                 ]
             }
         ]
+    },
+
+    "day2": {
+        "title": "Jueves 28",
+        "place": "Nagoya",
+        "date": "2018-03-28 6:00 AM",
+        "plan": [
+            {
+                "title": "Aeropuerto de Narita",
+                "type": "plane",
+                "duration": "02:30",
+                "image": "../images/stations/station-narita-airport.jpg",
+                "map": "https://goo.gl/maps/HPCefrKKiHM2",
+                "price": {
+                    "transport": 4000,
+                    "food": 300
+                },
+                "info": [
+                    { "text": "Recoger el WiFi en el Post Office" },
+                    { "text": "Hacer cambio los $ a ¥" },
+                    { "text": "Comer una rica pizza de Teriyaki. - ¥300" },
+                    { "text": "Comprar el N’EX Tokyo Round Trip Ticket - ¥4,000" }
+                ]
+            },
+            
+            {
+                "title": "Yokohama Station",
+                "type": "transition",
+                "duration": "01:40",
+                "map": "https://goo.gl/maps/62u1T2fHPu12"
+            },
+
+            {
+                "title": "Higashi-Kanagawa Station",
+                "type": "transition",
+                "duration": "00:10",
+                "price": {
+                    "transport": 140
+                },
+                "map": "https://goo.gl/maps/TTksK8tpevN2"
+            },
+
+            {
+                "title": "Apartamento",
+                "type": "house",
+                "duration": "00:40",
+                "map": "https://goo.gl/maps/pH4T7yht4wx",
+                "info": [
+                    {
+                        "text": "Dejar maletas y arreglarse para cenar"
+                    }
+                ]
+            },
+
+            {
+                "title": "Shin-Yokohama Station",
+                "type": "transition",
+                "duration": "00:25",
+                "map": "https://goo.gl/maps/toht4Hm2Vvu",
+                "price": {
+                    "transport": 170
+                }
+            },
+
+            {
+                "title": "Shin-Yokohama Ramen Museum",
+                "type": "food",
+                "duration": "02:00",
+                "image": "http://www.travelcaffeine.com/wp-content/uploads/2017/01/shin-yokohama-ramen-museum-tokyo-japan-557.jpg",
+                "map": "https://goo.gl/maps/B5ouF7YatqM2",
+                "price": {
+                    "food": 1200
+                },
+                "info": [
+                    {
+                        "text": "Buscar un buen Tonkotsu Ramen"
+                    }
+                ]
+            },
+
+            {
+                "title": "Higashi-Kanagawa Station",
+                "type": "transition",
+                "duration": "00:25",
+                "map": "https://goo.gl/maps/TTksK8tpevN2",
+                "price": {
+                    "transport": 170
+                }
+            },
+
+            {
+                "title": "Apartamento",
+                "type": "house",
+                "duration": "08:00",
+                "map": "https://goo.gl/maps/pH4T7yht4wx",
+                "info": [
+                    {
+                        "text": "Dejar arreglado todo para el salir temprano en la mañana"
+                    }
+                ]
+            }
+        ]
     }
 }
